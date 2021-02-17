@@ -1,0 +1,6 @@
+
+# build command
+docker build -t apache:latest .
+
+# run command
+docker run -d -it --name apache -p 8080:80 -v "$PWD"/bin/:/usr/local/apache2/htdocs/ apache:latest
